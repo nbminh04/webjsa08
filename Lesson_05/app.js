@@ -28,7 +28,8 @@ function login(){
             //kiểm tra tiếp xem pasword cho trùng k
             if(li_password === arrPassword[i]){
                 // dang nhap
-                alert("Login sucessfuly!")
+                // alert("Login sucessfuly!")
+                window.location.href = "index.html";
                 break;
             }else{
                 //bao sai mat khau

@@ -55,6 +55,7 @@ function createItem(list, i){
     btn_del.textContent = "Delete"
 
     todo.appendChild(li)
+    li.appendChild(btn_cart)
     li.appendChild(btn_del)
 
     li.addEventListener("click", function(){
