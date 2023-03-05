@@ -3,6 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.li-su{
+    margin: 0 35%;
+}
 .container{
     display: flex;
 }
@@ -51,14 +55,14 @@
     content: '$';
 }
 
-.item .inforItem .addToCart{
+.item .inforItem .addToCart, .btn_del{
     border: none;
     background-color: rgb(202, 202, 202);
     padding: 8px;
     border-radius: 16px;
 }
 
-.item .inforItem .addToCart:hover{
+.item .inforItem .addToCart:hover, .btn_del:hover{
     background-color: rgb(255, 181, 32);
     box-shadow: 0 0 3px 0px;
 }

@@ -64,6 +64,13 @@ let products = [
         image:'https://static.wixstatic.com/media/82fcd3_2ce74c274e764f19bfabeb091b3fa956~mv2_d_1440_1920_s_2.png/v1/fill/w_625,h_834,al_c,q_90,usm_0.66_1.00_0.01/82fcd3_2ce74c274e764f19bfabeb091b3fa956~mv2_d_1440_1920_s_2.webp',
         price: 1300,
         still: true
+    },
+    {
+        id: 9,
+        name: 'iphone 14',
+        image:'https://static.wixstatic.com/media/82fcd3_2ce74c274e764f19bfabeb091b3fa956~mv2_d_1440_1920_s_2.png/v1/fill/w_625,h_834,al_c,q_90,usm_0.66_1.00_0.01/82fcd3_2ce74c274e764f19bfabeb091b3fa956~mv2_d_1440_1920_s_2.webp',
+        price: 1400,
+        still: true
     }
 ]
 
@@ -104,11 +111,27 @@ function createItem(list,i){
     inforItem.appendChild(addToCart)
 
     addToCart.addEventListener('click',function(){
-        let cart = document.querySelector('.cart')
+        // let cart = document.querySelector('.cart')
 
-        let newItem = item.cloneNode(true)
+        // let newItem = item.cloneNode(true)
 
-        cart.appendChild(newItem)
+        // cart.appendChild(newItem)
+
+        let users = JSON.parse(localStorage.getItem('users'))
+        let newUser = users.map((user,index)=>{
+            return {
+                id:user.id,
+                username:user.username,
+                password:user.password,
+                cart:[products[i]]
+            }
+            
+
+            
+        })
+
+
+        console.log(newUser);
 
     })
 }
